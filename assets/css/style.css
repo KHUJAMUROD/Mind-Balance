@@ -31,115 +31,115 @@ body {
 
 /* --- Nav Bar --- */
 /* .navbar { */
-    /* position: fixed; */
-    /* top: 0; */
-    /* left: 0; */
-    /* width: 100%; */
-    /* z-index: 1000; */
-    /* padding: 20px 0; */
-    /* transition: all 0.4s ease; */
-    /* background: transparent; */
-    /* Вначале прозрачный */
+/* position: fixed; */
+/* top: 0; */
+/* left: 0; */
+/* width: 100%; */
+/* z-index: 1000; */
+/* padding: 20px 0; */
+/* transition: all 0.4s ease; */
+/* background: transparent; */
+/* Вначале прозрачный */
 /* } */
 /*  */
 /* .navbar .container { */
-    /* position: relative; */
-    /* z-index: 2; */
-    /* max-width: 900px; */
-    /* width: 90%; */
-    /* background: rgba(109, 26, 46, 0.25); */
-    /* padding: 60px; */
-    /* border-radius: 25px; */
-    /* border-left: rgba(212, 175, 55, 0.4) 3px solid; */
-    /* transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1); */
+/* position: relative; */
+/* z-index: 2; */
+/* max-width: 900px; */
+/* width: 90%; */
+/* background: rgba(109, 26, 46, 0.25); */
+/* padding: 60px; */
+/* border-radius: 25px; */
+/* border-left: rgba(212, 175, 55, 0.4) 3px solid; */
+/* transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1); */
 /* } */
 /*  */
 /* .navbar .container:hover { */
-    /* border-color: #D4AF37; */
-    /* background: rgba(74, 15, 31, 0.376); */
-    /* transform: translateY(-5px); */
+/* border-color: #D4AF37; */
+/* background: rgba(74, 15, 31, 0.376); */
+/* transform: translateY(-5px); */
 /* } */
 /*  */
 /* Эффект при скролле (добавляется через JS) */
 /* .navbar.scrolled { */
-    /* background: rgba(74, 15, 31, 0.95); */
-    /* Глубокий бургунди */
-    /* padding: 10px 0; */
-    /* box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3); */
-    /* backdrop-filter: blur(10px); */
+/* background: rgba(74, 15, 31, 0.95); */
+/* Глубокий бургунди */
+/* padding: 10px 0; */
+/* box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3); */
+/* backdrop-filter: blur(10px); */
 /* } */
 /*  */
 /* .nav-container { */
-    /* max-width: 1200px; */
-    /* margin: 0 auto; */
-    /* width: 90%; */
-    /* display: flex; */
-    /* justify-content: space-between; */
-    /* align-items: center; */
+/* max-width: 1200px; */
+/* margin: 0 auto; */
+/* width: 90%; */
+/* display: flex; */
+/* justify-content: space-between; */
+/* align-items: center; */
 /* } */
 /*  */
 /* .nav-logo { */
-    /* display: flex; */
-    /* align-items: center; */
-    /* gap: 15px; */
-    /* text-decoration: none; */
+/* display: flex; */
+/* align-items: center; */
+/* gap: 15px; */
+/* text-decoration: none; */
 /* } */
 /*  */
 /* .nav-logo img { */
-    /* height: 50px; */
-    /* Размер вашего круглого лого */
-    /* border-radius: 50%; */
+/* height: 50px; */
+/* Размер вашего круглого лого */
+/* border-radius: 50%; */
 /* } */
 /*  */
 /* .logo-text { */
-    /* display: flex; */
-    /* flex-direction: column; */
-    /* font-family: 'Cormorant Garamond', serif; */
-    /* line-height: 1; */
+/* display: flex; */
+/* flex-direction: column; */
+/* font-family: 'Cormorant Garamond', serif; */
+/* line-height: 1; */
 /* } */
 /*  */
 /* .logo-text .gold-text { */
-    /* font-size: 1.2rem; */
-    /* font-weight: 700; */
-    /* letter-spacing: 2px; */
+/* font-size: 1.2rem; */
+/* font-weight: 700; */
+/* letter-spacing: 2px; */
 /* } */
 /*  */
 /* .logo-text .champagne-text { */
-    /* font-size: 0.9rem; */
-    /* color: #F7E7CE; */
-    /* font-style: italic; */
+/* font-size: 0.9rem; */
+/* color: #F7E7CE; */
+/* font-style: italic; */
 /* } */
 /*  */
 /* .nav-links { */
-    /* display: flex; */
-    /* list-style: none; */
-    /* gap: 30px; */
-    /* align-items: center; */
+/* display: flex; */
+/* list-style: none; */
+/* gap: 30px; */
+/* align-items: center; */
 /* } */
 /*  */
 /* .nav-links a { */
-    /* text-decoration: none; */
-    /* color: #F7E7CE; */
-    /* font-size: 0.9rem; */
-    /* text-transform: uppercase; */
-    /* letter-spacing: 1px; */
-    /* transition: 0.3s; */
+/* text-decoration: none; */
+/* color: #F7E7CE; */
+/* font-size: 0.9rem; */
+/* text-transform: uppercase; */
+/* letter-spacing: 1px; */
+/* transition: 0.3s; */
 /* } */
 /*  */
 /* .nav-links a:hover { */
-    /* color: #E6C65C; */
+/* color: #E6C65C; */
 /* } */
 /*  */
 /* Кнопка в меню */
 /* .nav-cta { */
-    /* border: 1px solid #D4AF37; */
-    /* padding: 10px 20px !important; */
-    /* color: #D4AF37 !important; */
+/* border: 1px solid #D4AF37; */
+/* padding: 10px 20px !important; */
+/* color: #D4AF37 !important; */
 /* } */
 /*  */
 /* .nav-cta:hover { */
-    /* background: #D4AF37; */
-    /* color: #4A0F1F !important; */
+/* background: #D4AF37; */
+/* color: #4A0F1F !important; */
 /* } */
 
 /* --- Hero Section --- */
@@ -1033,6 +1033,7 @@ body {
 
 .cta-contacts {
     margin-bottom: 40px;
+    font-size: 1.5rem;
 }
 
 .cta-contacts a {
@@ -1054,13 +1055,23 @@ body {
 
 .btn-outline {
     padding: 15px 30px;
+    background: transparent;
     border: 1px solid #D4AF37;
     color: #D4AF37;
     text-decoration: none;
-    text-align: center;
     text-transform: uppercase;
     letter-spacing: 1px;
-    transition: 0.3s;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    display: inline-block;
+}
+
+.btn-outline:hover {
+    background: #D4AF37;
+    color: #4A0F1F;
+    /* Бургунди при наведении */
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
 }
 
 .btn-gradient {
@@ -1085,6 +1096,7 @@ body {
     font-size: 1rem;
     color: #AFAFAF;
     font-style: italic;
+    font-size: 25px;
 }
 
 /* -----------------------------------------------------------------------------------------------------  */
@@ -2041,117 +2053,123 @@ body {
 
 /* -----------------------------------------------------------------------------------------------------  */
 
-/* --- Адаптивность для финальной секции CTA --- */
+/* --- Оптимизированная адаптивность (Центрированная) --- */
 /* CTA-FINAL FOOTER */
 /* Планшеты (до 1024px) */
 @media (max-width: 1024px) {
     .cta-title {
-        font-size: 2.8rem;
+        font-size: 2.6rem;
     }
-
     .cta-content {
-        width: 85%;
+        width: 90%;
+        margin: 0 auto;
     }
 }
 
 /* Смартфоны (до 768px) */
 @media (max-width: 768px) {
     .cta-final {
-        padding: 80px 0;
-        background-attachment: scroll;
-        /* Отключаем fixed для плавности скролла */
+        padding: 50px 0;
+        background-attachment: scroll !important; /* Убираем fixed для мобилок (производительность) */
         text-align: center;
-        /* Центрируем всё для мобильной эстетики */
     }
 
     .cta-final .container {
-        padding: 25px 20px;
-        margin-bottom: 20px;
-        text-align: left;
-        /* Оставляем выравнивание по левому краю для списков */
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Центрируем содержимое контейнера */
+        justify-content: center;
+        padding: 35px 20px;
         background: rgba(109, 26, 46, 0.25);
         border-radius: 25px;
-        border: 1.5px solid rgba(74, 15, 31, 0.670);
-        border-left: rgba(212, 175, 55, 0.4) 3px solid;
-        transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
-    }
-
-    .cta-final .container:hover {
-        border-color: #D4AF37;
-        background: rgba(74, 15, 31, 0.376);
-        transform: translateY(-5px);
+        border: 1.5px solid rgba(74, 15, 31, 0.6);
+        /* Меняем боковую линию на симметричную обводку или убираем акцент на одну сторону */
+        border-left: 1.5px solid rgba(74, 15, 31, 0.6); 
+        box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        transition: transform 0.3s ease;
     }
 
     .cta-title {
-        font-size: 2.2rem;
-        line-height: 1.2;
-        margin-bottom: 30px;
+        font-size: 2rem;
+        line-height: 1.25;
+        margin-bottom: 25px;
+        width: 100%;
     }
 
     .cta-text p {
         font-size: 1.1rem;
         margin-bottom: 20px;
-        padding: 0 10px;
+        padding: 0;
+        max-width: 100%;
     }
 
-    /* Адаптируем блок с вопросом */
+    /* Блок с вопросом */
     .cta-question h3 {
-        font-size: 2rem;
+        font-size: 1.8rem;
         border-left: none;
-        /* Убираем боковую линию */
-        border-top: 2px solid #D4AF37;
-        /* Ставим линию сверху */
-        padding: 20px 0 0;
-        margin: 30px auto 20px;
-        display: inline-block;
-        width: 80%;
+        border-top: 2px solid #D4AF37; /* Линия-разделитель сверху */
+        padding-top: 20px;
+        margin: 25px auto 15px;
+        display: block;
+        width: 60%; /* Короткая декоративная линия */
     }
 
     .cta-contacts {
         font-size: 1.1rem;
-        margin-bottom: 35px;
+        margin-bottom: 30px;
+        width: 100%;
     }
 
-    /* Кнопки на весь экран для удобства нажатия пальцем */
+    /* Кнопки: во всю ширину, в колонку */
     .cta-buttons {
-        max-width: 100%;
-        width: 90%;
-        margin: 0 auto 30px;
-        gap: 15px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        gap: 12px;
     }
 
     .btn-outline,
     .btn-gradient {
-        padding: 18px 20px;
-        font-size: 0.9rem;
-        display: block;
         width: 100%;
+        max-width: 300px; /* Чтобы кнопки не были слишком "длинными" на широких телефонах */
+        padding: 16px 20px;
+        margin: 0 !important; /* Сбрасываем внешние отступы */
+        box-sizing: border-box;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1rem;
     }
 
     .cta-footer-note {
-        font-size: 0.95rem;
-        padding: 0 20px;
+        font-size: 0.9rem;
+        margin-top: 20px;
+        opacity: 0.8;
     }
 }
 
 /* Маленькие смартфоны (до 480px) */
 @media (max-width: 480px) {
     .cta-title {
-        font-size: 1.8rem;
+        font-size: 1.7rem;
     }
 
     .cta-question h3 {
-        font-size: 1.6rem;
-    }
-
-    .cta-contacts {
-        font-size: 1rem;
+        font-size: 1.5rem;
+        width: 80%;
     }
 
     .cta-contacts a {
         display: block;
-        /* Номер телефона на новую строку для кликабельности */
-        margin-top: 5px;
-        font-size: 1.2rem;
+        margin-top: 10px;
+        font-size: 1.25rem;
+        font-weight: bold;
+        color: #D4AF37; /* Выделяем номер цветом для кликабельности */
+    }
+
+    .btn-outline,
+    .btn-gradient {
+        max-width: 100%; /* На совсем маленьких экранах — на всю ширину */
     }
 }
