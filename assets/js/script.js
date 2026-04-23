@@ -96,11 +96,34 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }, { threshold: 0.1 });
-
+    
     document.querySelectorAll('.benefit-item, .dress-code-box').forEach(el => {
         el.style.opacity = '0';
         el.style.transform = 'translateY(30px)';
         el.style.transition = 'all 0.6s ease-out';
         benefitObserver.observe(el);
+    });
+});
+
+/* -----------------------------------------------------------------------------------------------------  */
+// Why Baku Section //
+
+document.addEventListener('DOMContentLoaded', () => {
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry, index) => {
+            if (entry.isIntersecting) {
+                setTimeout(() => {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }, index * 100);
+            }
+        });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.why-card').forEach(el => {
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(20px)';
+        el.style.transition = 'all 0.8s ease-out';
+        observer.observe(el);
     });
 });
