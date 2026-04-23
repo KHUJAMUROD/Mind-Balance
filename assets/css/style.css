@@ -524,8 +524,8 @@ body {
 .target-audience {
     position: relative;
     padding: 120px 0;
-    background: 
-          linear-gradient(rgba(0, 0, 0, 0.544)),
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.544)),
         url('/assets/img/target.jpg') no-repeat center center/cover;
     background-attachment: fixed;
     display: flex;
@@ -564,7 +564,8 @@ body {
 
 .target-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr; /* Две колонки как в премиум-дизайне */
+    grid-template-columns: 1fr 1fr;
+    /* Две колонки как в премиум-дизайне */
     gap: 40px;
 }
 
@@ -615,7 +616,7 @@ body {
         padding: 60px 0;
         background-attachment: scroll;
     }
-    
+
     .target-title {
         font-size: 2.2rem;
     }
@@ -625,7 +626,7 @@ body {
         text-align: center;
         padding: 30px 20px;
     }
-    
+
     .target-icon {
         margin-bottom: 10px;
     }
@@ -1382,6 +1383,10 @@ body {
     .target-audience {
         padding: 60px 0;
         background-attachment: scroll;
+        padding: 120px 0;
+        background:
+            linear-gradient(rgba(0, 0, 0, 0.544)),
+            url('/assets/img/target.jpg') no-repeat center center/cover;
         /* Отключаем fixed для плавности */
     }
 
