@@ -468,7 +468,7 @@ body {
     border: 1px dashed rgba(212, 175, 55, 0.3);
     border-radius: 50%;
     /* animation: rotate 20s linear infinite; */
-    background: url(/assets/img/philosofy.png) center / cover no-repeat;
+    background: url('/assets/img/philosofy.png') center / cover no-repeat;
 }
 
 @keyframes rotate {
@@ -517,6 +517,118 @@ body {
 .phi-text p {
     font-size: 1rem;
     color: #AFAFAF;
+}
+
+/* --- Target Section --- */
+/* --- Секция Целевая Аудитория (Фон Hero) --- */
+.target-audience {
+    position: relative;
+    padding: 120px 0;
+    background: 
+          linear-gradient(rgba(0, 0, 0, 0.544)),
+        url('/assets/img/target.jpg') no-repeat center center/cover;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+}
+
+.target-audience .container {
+    background: rgba(109, 26, 46, 0.25);
+    /* Глубокий графит с прозрачностью */
+    padding: 35px 45px;
+    border-radius: 4px;
+    max-width: 1200px;
+    border: rgba(212, 175, 55, 0.4) 1px solid;
+    border-left: rgba(212, 175, 55, 0.4) 5px solid;
+    /* Жирная золотая линия слева как на фото */
+    border-radius: 25px;
+    /* backdrop-filter: blur(12px); */
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+}
+
+.target-audience .container:hover {
+    border-color: #D4AF37;
+    background: rgba(74, 15, 31, 0.376);
+    transform: translateY(-5px);
+}
+
+.target-title {
+    font-size: 3.5rem;
+    color: #E6C65C;
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 500;
+    margin-bottom: 60px;
+    text-align: center;
+}
+
+.target-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Две колонки как в премиум-дизайне */
+    gap: 40px;
+}
+
+.target-item {
+    display: flex;
+    gap: 25px;
+    background: rgba(109, 26, 46, 0.25);
+    padding: 40px;
+    border-radius: 15px;
+    border: rgba(212, 175, 55, 0.4) 1px solid;
+    transition: all 0.4s ease;
+}
+
+.target-item:hover {
+    background: rgba(74, 15, 31, 0.376);
+    transform: translateY(-10px);
+    border-color: #D4AF37;
+}
+
+.target-icon {
+    font-size: 2.5rem;
+    color: #D4AF37;
+    flex-shrink: 0;
+}
+
+.target-text h3 {
+    font-size: 1.8rem;
+    color: #F7E7CE;
+    font-family: 'Cormorant Garamond', serif;
+    margin-bottom: 12px;
+}
+
+.target-text p {
+    font-size: 1.1rem;
+    color: #AFAFAF;
+    line-height: 1.5;
+}
+
+/* --- Адаптивность для восьмой секции --- */
+@media (max-width: 992px) {
+    .target-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .target-audience {
+        padding: 60px 0;
+        background-attachment: scroll;
+    }
+    
+    .target-title {
+        font-size: 2.2rem;
+    }
+
+    .target-item {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px 20px;
+    }
+    
+    .target-icon {
+        margin-bottom: 10px;
+    }
 }
 
 /* --- Price Section --- */
@@ -1242,6 +1354,112 @@ body {
     }
 
     .phi-text p {
+        font-size: 0.95rem;
+    }
+}
+
+/* -----------------------------------------------------------------------------------------------------  */
+
+/* --- Адаптивность для секции Для кого участие --- */
+/* TARGET */
+/* Планшеты (до 1024px) */
+@media (max-width: 1024px) {
+    .target-title {
+        font-size: 2.8rem;
+    }
+
+    .target-grid {
+        gap: 30px;
+    }
+
+    .target-item {
+        padding: 30px;
+    }
+}
+
+/* Смартфоны (до 768px) */
+@media (max-width: 768px) {
+    .target-audience {
+        padding: 60px 0;
+        background-attachment: scroll;
+        /* Отключаем fixed для плавности */
+    }
+
+    .target-audience .container {
+        padding: 25px 20px;
+        margin-bottom: 20px;
+        text-align: left;
+        /* Оставляем выравнивание по левому краю для списков */
+        background: rgba(109, 26, 46, 0.25);
+        border-radius: 25px;
+        border: 1.5px solid rgba(74, 15, 31, 0.670);
+        border-left: rgba(212, 175, 55, 0.4) 3px solid;
+        transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    }
+
+    .target-audience .container:hover {
+        border-color: #D4AF37;
+        background: rgba(74, 15, 31, 0.376);
+        transform: translateY(-5px);
+    }
+
+    .target-title {
+        font-size: 2.2rem;
+        margin-bottom: 40px;
+    }
+
+    /* Переключаем сетку в одну колонку */
+    .target-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    /* Меняем ориентацию карточки на вертикальную */
+    .target-item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 30px 20px;
+        gap: 15px;
+    }
+
+    .target-item:hover {
+        transform: translateY(-5px);
+        /* На мобильных сдвиг вверх привычнее */
+    }
+
+    .target-icon {
+        font-size: 3rem;
+        /* Делаем иконку акцентом сверху */
+        margin-bottom: 5px;
+    }
+
+    .target-text h3 {
+        font-size: 1.6rem;
+    }
+
+    .target-text p {
+        font-size: 1rem;
+        line-height: 1.4;
+    }
+}
+
+/* Маленькие смартфоны (до 480px) */
+@media (max-width: 480px) {
+    .target-title {
+        font-size: 1.8rem;
+        line-height: 1.2;
+    }
+
+    .target-item {
+        padding: 25px 15px;
+    }
+
+    .target-text h3 {
+        font-size: 1.4rem;
+    }
+
+    .target-text p {
         font-size: 0.95rem;
     }
 }

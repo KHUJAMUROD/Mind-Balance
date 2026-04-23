@@ -1,7 +1,6 @@
-// Hero //
 /* -----------------------------------------------------------------------------------------------------  */
+// Hero //
 
-// Простая анимация появления текста при загрузке
 window.addEventListener('DOMContentLoaded', () => {
     const content = document.querySelector('.hero-content');
     content.style.opacity = '0';
@@ -37,26 +36,6 @@ document.addEventListener('DOMContentLoaded', () => {
     aboutSection.style.transition = 'all 0.8s ease-out';
 
     observer.observe(aboutSection);
-});
-
-/* -----------------------------------------------------------------------------------------------------  */
-// Scrolling //
-
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault(); // Отменяем мгновенный прыжок
-
-        const targetId = this.getAttribute('href'); // Получаем id цели (например, #about)
-        const targetElement = document.querySelector(targetId);
-
-        if (targetElement) {
-            // Рассчитываем позицию
-            window.scrollTo({
-                top: targetElement.offsetTop,
-                behavior: 'smooth' // Тот самый плавный эффект
-            });
-        }
-    });
 });
 
 /* -----------------------------------------------------------------------------------------------------  */
@@ -128,7 +107,43 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-// Просто добавьте этот класс в ваш существующий document.querySelectorAll
+/* -----------------------------------------------------------------------------------------------------  */
+// Philosiphty Section //
+
+const elementsToAnimate = document.querySelectorAll(
+    '.phi-circle-visual, .phi-item, .philosophy-header'
+);
+
+/* -----------------------------------------------------------------------------------------------------  */
+// Target Section //
+
+const elementsToAnimate = document.querySelectorAll(
+    '.target-item, .target-title'
+);
+
+/* -----------------------------------------------------------------------------------------------------  */
+// Price Section //
+
 const elementsToAnimate = document.querySelectorAll(
     '.price-column, .pricing-divider, .format-info, .limit-box'
 );
+
+/* -----------------------------------------------------------------------------------------------------  */
+// Scrolling //
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault(); // Отменяем мгновенный прыжок
+
+        const targetId = this.getAttribute('href'); // Получаем id цели (например, #about)
+        const targetElement = document.querySelector(targetId);
+
+        if (targetElement) {
+            // Рассчитываем позицию
+            window.scrollTo({
+                top: targetElement.offsetTop,
+                behavior: 'smooth' // Тот самый плавный эффект
+            });
+        }
+    });
+});
