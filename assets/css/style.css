@@ -822,17 +822,16 @@ body {
         margin-bottom: 20px;
         text-align: left;
         /* Оставляем выравнивание по левому краю для списков */
-        background: rgba(74, 15, 31, 0.670);
+        background: rgba(109, 26, 46, 0.25);
         border-radius: 25px;
         border: 1.5px solid rgba(74, 15, 31, 0.670);
-        border-left: 3px solid #C9A227;
-        backdrop-filter: blur(15px);
+        border-left: rgba(212, 175, 55, 0.4) 3px solid;
         transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
     }
 
     .creator-card:hover {
-        background: rgba(109, 26, 46, 0.25);
-        border-color: rgba(212, 175, 55, 0.4);
+        border-color: #D4AF37;
+        background: rgba(74, 15, 31, 0.376);
         transform: translateY(-5px);
     }
 
@@ -915,6 +914,24 @@ body {
         background:
             linear-gradient(rgba(0, 0, 0, 0.544)),
             url('/assets/img/about-section.jpg') no-repeat center center/cover;
+    }
+
+    .benefits .container {
+        padding: 20px 15px;
+        background-color: rgba(255, 255, 255, 0.07);
+        /* Делаем карточку чуть светлее для контраста */
+        background: rgba(74, 15, 31, 0.670);
+        border-radius: 25px;
+        border: 1.5px solid rgba(74, 15, 31, 0.670);
+        border-left: 3px solid #C9A227;
+        backdrop-filter: blur(15px);
+        transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    }
+
+    .benefits .container:hover {
+        background: rgba(109, 26, 46, 0.25);
+        border-color: rgba(212, 175, 55, 0.4);
+        transform: translateY(-5px);
     }
 
     .benefits-title {
@@ -1016,6 +1033,24 @@ body {
             url('/assets/img/baku-section.jpg') no-repeat center center/cover;
     }
 
+    .why-baku .container {
+        padding: 20px 15px;
+        background-color: rgba(255, 255, 255, 0.07);
+        /* Делаем карточку чуть светлее для контраста */
+        background: rgba(74, 15, 31, 0.670);
+        border-radius: 25px;
+        border: 1.5px solid rgba(74, 15, 31, 0.670);
+        border-left: 3px solid #C9A227;
+        backdrop-filter: blur(15px);
+        transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    }
+
+    .why-baku .container:hover {
+        background: rgba(109, 26, 46, 0.25);
+        border-color: rgba(212, 175, 55, 0.4);
+        transform: translateY(-5px);
+    }
+
     .why-title {
         font-size: 2.2rem;
         text-align: center;
@@ -1078,11 +1113,14 @@ body {
     .philosophy-content {
         gap: 40px;
     }
+
     .phi-circle-visual {
         width: 300px;
         height: 300px;
-        flex-shrink: 0; /* Чтобы круг не сжимался */
+        flex-shrink: 0;
+        /* Чтобы круг не сжимался */
     }
+
     .philosophy-title {
         font-size: 2.8rem;
     }
@@ -1093,6 +1131,24 @@ body {
     .philosophy {
         padding: 60px 0;
         background-attachment: scroll;
+    }
+
+    .philosophy .container {
+        padding: 20px 15px;
+        background-color: rgba(255, 255, 255, 0.07);
+        /* Делаем карточку чуть светлее для контраста */
+        background: rgba(74, 15, 31, 0.670);
+        border-radius: 25px;
+        border: 1.5px solid rgba(74, 15, 31, 0.670);
+        border-left: 3px solid #C9A227;
+        backdrop-filter: blur(15px);
+        transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    }
+
+    .philosophy .container:hover {
+        background: rgba(109, 26, 46, 0.25);
+        border-color: rgba(212, 175, 55, 0.4);
+        transform: translateY(-5px);
     }
 
     .philosophy-header {
@@ -1176,15 +1232,18 @@ body {
 /* -----------------------------------------------------------------------------------------------------  */
 
 /* --- Адаптивность для секции Стоимость --- */
-        /* PRICE */
+/* PRICE */
 /* Планшеты (до 1024px) */
 @media (max-width: 1024px) {
     .pricing-title {
         font-size: 2.8rem;
     }
+
     .price-value {
-        font-size: 4rem; /* Немного уменьшаем цену */
+        font-size: 4rem;
+        /* Немного уменьшаем цену */
     }
+
     .container {
         width: 85%;
     }
@@ -1194,7 +1253,26 @@ body {
 @media (max-width: 768px) {
     .pricing {
         padding: 60px 0;
-        background-attachment: scroll; /* Для плавности на мобильных */
+        background-attachment: scroll;
+        /* Для плавности на мобильных */
+    }
+
+    .pricing .container {
+        padding: 20px 15px;
+        background-color: rgba(255, 255, 255, 0.07);
+        /* Делаем карточку чуть светлее для контраста */
+        background: rgba(74, 15, 31, 0.670);
+        border-radius: 25px;
+        border: 1.5px solid rgba(74, 15, 31, 0.670);
+        border-left: 3px solid #C9A227;
+        backdrop-filter: blur(15px);
+        transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    }
+
+    .pricing .container:hover {
+        background: rgba(109, 26, 46, 0.25);
+        border-color: rgba(212, 175, 55, 0.4);
+        transform: translateY(-5px);
     }
 
     .pricing-title {
@@ -1212,12 +1290,14 @@ body {
 
     .price-column {
         padding: 20px;
-        background: rgba(255, 255, 255, 0.03); /* Легкое выделение карточки */
+        background: rgba(255, 255, 255, 0.03);
+        /* Легкое выделение карточки */
         border-radius: 10px;
     }
 
     .price-value {
-        font-size: 4.5rem; /* На мобильных цена должна оставаться заметной */
+        font-size: 4.5rem;
+        /* На мобильных цена должна оставаться заметной */
         margin-top: 10px;
     }
 
@@ -1233,7 +1313,8 @@ body {
         font-size: 1.8rem;
     }
 
-    .format-info p, .format-list li {
+    .format-info p,
+    .format-list li {
         font-size: 1.1rem;
     }
 
@@ -1257,7 +1338,8 @@ body {
     }
 
     .price-value {
-        font-size: 3.5rem; /* Финальное уменьшение для самых узких экранов */
+        font-size: 3.5rem;
+        /* Финальное уменьшение для самых узких экранов */
     }
 
     .format-info h3 {
