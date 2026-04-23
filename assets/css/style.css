@@ -54,24 +54,24 @@ body {
 .hero-content {
     position: relative;
     z-index: 2;
-    max-width: 900px;
+    max-width: 1250px;
     width: 85%;
-    background: rgba(74, 15, 31, 0.670);
+    background: rgba(109, 26, 46, 0.25);
     /* Полупрозрачный бургунди */
-    padding: 40px;
+    padding: 50px;
     border-radius: 25px;
     /* Острые углы выглядят строже и дороже */
-    border-left: #D4AF37 3px solid;
+    border-left: rgba(212, 175, 55, 0.4) 3px solid;
+
     /* Классическое золото */
     margin-bottom: 5%;
-    backdrop-filter: blur(8px);
     transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
 .hero-content:hover {
-    background: rgba(109, 26, 46, 0.25);
-    border-color: rgba(212, 175, 55, 0.4);
+    border-color: #D4AF37;
     transform: translateY(-5px);
+    padding: 60px;
 }
 
 .hero-title {
@@ -79,7 +79,7 @@ body {
     color: #E6C65C;
     /* Мягкое сияющее золото */
     margin-bottom: 20px;
-    font-weight: 700;
+    font-weight: 500;
     text-transform: uppercase;
     letter-spacing: 3px;
 }
@@ -132,17 +132,16 @@ body {
     z-index: 2;
     max-width: 900px;
     width: 90%;
-    background: rgba(74, 15, 31, 0.670);
+    background: rgba(109, 26, 46, 0.25);
     padding: 60px;
     border-radius: 25px;
-    border-left: #C9A227 3px solid;
-    backdrop-filter: blur(8px);
+    border-left: rgba(212, 175, 55, 0.4) 3px solid;
     transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
 .about .container:hover {
-    background: rgba(109, 26, 46, 0.25);
-    border-color: rgba(212, 175, 55, 0.4);
+    border-color: #D4AF37;
+    background: rgba(74, 15, 31, 0.376);
     transform: translateY(-5px);
 }
 
@@ -193,17 +192,16 @@ body {
     padding: 50px;
     width: 75%;
     margin-bottom: 40px;
-    background: rgba(74, 15, 31, 0.670);
+    background: rgba(109, 26, 46, 0.25);
     border-radius: 25px;
     border: 1.5px solid rgba(74, 15, 31, 0.670);
-    border-left: 3px solid #C9A227;
-    backdrop-filter: blur(15px);
+    border-left: rgba(212, 175, 55, 0.4) 3px solid;
     transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
 .creator-card:hover {
-    background: rgba(109, 26, 46, 0.25);
-    border-color: rgba(212, 175, 55, 0.4);
+    border-color: #D4AF37;
+    background: rgba(74, 15, 31, 0.376);
     transform: translateY(-5px);
 }
 
@@ -244,17 +242,16 @@ body {
 .benefits .container {
     max-width: 900px;
     width: 90%;
-    background: rgba(74, 15, 31, 0.670);
+    background: rgba(109, 26, 46, 0.25);
     padding: 60px;
     border-radius: 25px;
-    border-left: #C9A227 3px solid;
-    backdrop-filter: blur(8px);
+    border-left: rgba(212, 175, 55, 0.4) 3px solid;
     transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
 .benefits .container:hover {
-    background: rgba(109, 26, 46, 0.25);
-    border-color: rgba(212, 175, 55, 0.4);
+    border-color: #D4AF37;
+    background: rgba(74, 15, 31, 0.376);
     transform: translateY(-5px);
 }
 
@@ -311,7 +308,6 @@ body {
     display: flex;
     align-items: center;
     gap: 20px;
-    backdrop-filter: blur(10px);
 }
 
 .dress-code-box p {
@@ -330,8 +326,8 @@ body {
     position: relative;
     padding: 100px 0;
     /* Продолжаем фон Hero */
-    background: 
-        linear-gradient(rgba(0, 0, 0, 0.544)), 
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.544)),
         url('/assets/img/baku-section.jpg') no-repeat center center/cover;
     background-attachment: fixed;
     display: flex;
@@ -340,7 +336,8 @@ body {
 
 .why-title {
     font-size: 3.5rem;
-    color: #E6C65C; /* Мягкое сияющее золото */
+    color: #E6C65C;
+    /* Мягкое сияющее золото */
     font-family: 'Cormorant Garamond', serif;
     font-weight: 700;
     text-align: center;
@@ -355,26 +352,28 @@ body {
 }
 
 .why-card {
-    background: rgba(74, 15, 31, 0.670); /* Глубокий графит с прозрачностью */
+    background: rgba(109, 26, 46, 0.25);
+    /* Глубокий графит с прозрачностью */
     padding: 35px 45px;
     border-radius: 4px;
     border: 1px solid rgba(212, 175, 55, 0.15);
-    border-left: 5px solid #D4AF37; /* Жирная золотая линия слева как на фото */
+    border-left: rgba(212, 175, 55, 0.4) 5px solid;
+    /* Жирная золотая линия слева как на фото */
     border-radius: 25px;
-    backdrop-filter: blur(12px);
     transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
 }
 
 .why-card:hover {
-    background: rgba(109, 26, 46, 0.25);
-    border-color: rgba(212, 175, 55, 0.4);
+    border-color: #D4AF37;
+    background: rgba(74, 15, 31, 0.376);
     transform: translateY(-5px);
 }
 
 .why-card h3 {
     font-size: 1.8rem;
-    color: #F7E7CE; /* Шампань */
+    color: #F7E7CE;
+    /* Шампань */
     font-family: 'Cormorant Garamond', serif;
     margin-bottom: 12px;
     font-weight: 600;
@@ -383,11 +382,261 @@ body {
 
 .why-card p {
     font-size: 1.1rem;
-    color: #AFAFAF; /* Мягкий серый для баланса */
+    color: #AFAFAF;
+    /* Мягкий серый для баланса */
     line-height: 1.5;
     font-weight: 300;
 }
 
+/* --- Philosophy Section --- */
+/* --- Секция Философия (Фон Hero) --- */
+.philosophy {
+    position: relative;
+    padding: 120px 0;
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.544)),
+        url('/assets/img/philosophy.jpg') no-repeat center center/cover;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+}
+
+.philosophy .container {
+    background: rgba(109, 26, 46, 0.25);
+    /* Глубокий графит с прозрачностью */
+    padding: 35px 45px;
+    border-radius: 4px;
+    border: rgba(212, 175, 55, 0.4) 1px solid;
+    border-left: rgba(212, 175, 55, 0.4) 5px solid;
+    /* Жирная золотая линия слева как на фото */
+    border-radius: 25px;
+    /* backdrop-filter: blur(12px); */
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+}
+
+.philosophy .container:hover {
+    border-color: #D4AF37;
+    background: rgba(74, 15, 31, 0.376);
+    transform: translateY(-5px);
+}
+
+.philosophy-header {
+    text-align: left;
+    margin-bottom: 60px;
+    text-align: center;
+}
+
+.philosophy-title {
+    font-size: 3.5rem;
+    color: #E6C65C;
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.philosophy-mission {
+    font-size: 1.2rem;
+    color: #AFAFAF;
+    letter-spacing: 1px;
+}
+
+.philosophy-content {
+    display: flex;
+    align-items: center;
+    gap: 80px;
+}
+
+/* Стили круга как на фото */
+.phi-circle-visual {
+    position: relative;
+    width: 350px;
+    height: 350px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 50%;
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(10px);
+}
+
+.phi-circle-overlay {
+    position: absolute;
+    width: 90%;
+    height: 90%;
+    border: 1px dashed rgba(212, 175, 55, 0.3);
+    border-radius: 50%;
+    /* animation: rotate 20s linear infinite; */
+    background: url(/assets/img/philosofy.png) center / cover no-repeat;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Список элементов */
+.phi-list {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.phi-item {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.phi-icon-box {
+    width: 50px;
+    height: 50px;
+    background: rgba(109, 26, 46, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    font-size: 1.5rem;
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    color: #D4AF37;
+}
+
+.phi-text h3 {
+    font-size: 1.8rem;
+    color: #F7E7CE;
+    font-family: 'Cormorant Garamond', serif;
+    margin-bottom: 5px;
+}
+
+.phi-text p {
+    font-size: 1rem;
+    color: #AFAFAF;
+}
+
+/* --- Price Section --- */
+/* --- Секция Стоимость (Фон Hero) --- */
+.pricing {
+    position: relative;
+    padding: 100px 0;
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.544)),
+        url('/assets/img/price.jpg') no-repeat center center/cover;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+}
+
+.pricing-title {
+    font-size: 3.5rem;
+    color: #E6C65C;
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 700;
+    margin-bottom: 60px;
+    text-align: center;
+}
+
+.pricing .container {
+    background: rgba(109, 26, 46, 0.25);
+    /* Глубокий графит с прозрачностью */
+    padding: 35px 45px;
+    border-radius: 4px;
+    border: rgba(212, 175, 55, 0.4) 1px solid;
+    border-left: rgba(212, 175, 55, 0.4) 5px solid;
+    /* Жирная золотая линия слева как на фото */
+    border-radius: 25px;
+    /* backdrop-filter: blur(12px); */
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+}
+
+.pricing .container:hover {
+    border-color: #D4AF37;
+    background: rgba(74, 15, 31, 0.376);
+    transform: translateY(-5px);
+}
+
+.price-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.price-column h3 {
+    font-size: 20px;
+    color: #D4AF37;
+    margin-bottom: 10px;
+}
+
+.price-date {
+    font-size: 1.1rem;
+    color: #AFAFAF;
+    margin-bottom: 20px;
+}
+
+.price-value {
+    font-size: 5rem;
+    /* Огромные цифры как на фото */
+    color: #F7E7CE;
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.pricing-divider {
+    height: 1px;
+    background: rgba(255, 255, 255, 0.3);
+    margin: 40px 0;
+    width: 100%;
+}
+
+.format-info h3 {
+    font-size: 2rem;
+    color: #D4AF37;
+    margin-bottom: 25px;
+}
+
+.format-info p,
+.format-list li {
+    font-size: 1.2rem;
+    color: #F1DDC4;
+    margin-bottom: 15px;
+}
+
+.format-list {
+    list-style: none;
+    padding: 0;
+}
+
+/* Оливково-коричневый блок как на фото */
+.limit-box {
+    margin-top: 50px;
+    background: rgba(60, 56, 12, 0.6);
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    backdrop-filter: blur(10px);
+}
+
+.limit-box p {
+    color: #F7E7CE;
+    font-size: 1.1rem;
+    line-height: 1.4;
+}
+
+.limit-icon {
+    color: #D4AF37;
+    font-size: 1.2rem;
+}
 
 
 /* -----------------------------------------------------------------------------------------------------  */
@@ -395,7 +644,7 @@ body {
 /* -----------------------------------------------------------------------------------------------------  */
 
 /* --- Адаптивность --- */
-        /* HERO */
+/* HERO */
 /* Планшеты (до 1024px) */
 @media (max-width: 1024px) {
     .hero-title {
@@ -467,7 +716,7 @@ body {
 /* -----------------------------------------------------------------------------------------------------  */
 
 /* --- Адаптивность для второго блока --- */
-        /* ABOUT */
+/* ABOUT */
 /* Планшеты (до 1024px) */
 @media (max-width: 1024px) {
     .container {
@@ -543,7 +792,7 @@ body {
 /* -----------------------------------------------------------------------------------------------------  */
 
 /* --- Адаптивность для секции Создатели --- */
-        /* CREATORS */
+/* CREATORS */
 /* Планшеты (до 1024px) */
 @media (max-width: 1024px) {
     .creator-card {
@@ -645,7 +894,7 @@ body {
 /* -----------------------------------------------------------------------------------------------------  */
 
 /* --- Адаптивность для секции Преимущества --- */
-        /* BENEFITS */
+/* BENEFITS */
 /* Планшеты (до 1024px) */
 @media (max-width: 1024px) {
     .benefits-title {
@@ -744,12 +993,13 @@ body {
 /* -----------------------------------------------------------------------------------------------------  */
 
 /* --- Адаптивность для секции Почему Баку --- */
-        /* WHY BAKU */
+/* WHY BAKU */
 /* Планшеты (до 1024px) */
 @media (max-width: 1024px) {
     .why-title {
         font-size: 2.8rem;
     }
+
     .why-card {
         padding: 30px;
     }
@@ -759,7 +1009,8 @@ body {
 @media (max-width: 768px) {
     .why-baku {
         padding: 60px 0;
-        background-attachment: scroll; /* Отключаем fixed для плавности на мобильных */
+        background-attachment: scroll;
+        /* Отключаем fixed для плавности на мобильных */
         background:
             linear-gradient(rgba(0, 0, 0, 0.544)),
             url('/assets/img/baku-section.jpg') no-repeat center center/cover;
@@ -778,14 +1029,16 @@ body {
 
     .why-card {
         padding: 25px 20px;
-        text-align: center; /* Центрируем текст для мобильной эстетики */
-        border-left-width: 3px; /* Немного тоньше линия */
+        text-align: center;
+        /* Центрируем текст для мобильной эстетики */
+        border-left-width: 3px;
+        /* Немного тоньше линия */
         border-radius: 8px;
     }
 
     /* На мобильных сдвиг вправо выглядит как ошибка, меняем на легкий подъем */
     .why-card:hover {
-        transform: translateY(-5px); 
+        transform: translateY(-5px);
         background: rgba(109, 26, 46, 0.3);
     }
 
@@ -813,5 +1066,205 @@ body {
 
     .why-card h3 {
         font-size: 1.3rem;
+    }
+}
+
+/* -----------------------------------------------------------------------------------------------------  */
+
+/* --- Адаптивность для секции Философия --- */
+/* PHILOSOPHY */
+/* Планшеты (до 1024px) */
+@media (max-width: 1024px) {
+    .philosophy-content {
+        gap: 40px;
+    }
+    .phi-circle-visual {
+        width: 300px;
+        height: 300px;
+        flex-shrink: 0; /* Чтобы круг не сжимался */
+    }
+    .philosophy-title {
+        font-size: 2.8rem;
+    }
+}
+
+/* Смартфоны (до 768px) */
+@media (max-width: 768px) {
+    .philosophy {
+        padding: 60px 0;
+        background-attachment: scroll;
+    }
+
+    .philosophy-header {
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    .philosophy-title {
+        font-size: 2.2rem;
+    }
+
+    .philosophy-mission {
+        font-size: 1.1rem;
+        padding: 0 10px;
+    }
+
+    /* Меняем направление: круг теперь сверху, список под ним */
+    .philosophy-content {
+        flex-direction: column;
+        gap: 50px;
+        align-items: center;
+    }
+
+    .phi-circle-visual {
+        width: 260px;
+        height: 260px;
+        /* Добавляем легкое свечение для акцента на мобильных */
+        box-shadow: 0 0 30px rgba(109, 26, 46, 0.3);
+    }
+
+    .phi-list {
+        width: 100%;
+        gap: 35px;
+    }
+
+    /* Элементы списка центрируем */
+    .phi-item {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+
+    .phi-icon-box {
+        width: 60px;
+        height: 60px;
+        font-size: 1.8rem;
+    }
+
+    .phi-text h3 {
+        font-size: 1.6rem;
+        margin-bottom: 8px;
+    }
+
+    .phi-text p {
+        font-size: 1rem;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+}
+
+/* Маленькие смартфоны (до 480px) */
+@media (max-width: 480px) {
+    .philosophy-title {
+        font-size: 1.8rem;
+    }
+
+    .phi-circle-visual {
+        width: 220px;
+        height: 220px;
+    }
+
+    .phi-text h3 {
+        font-size: 1.4rem;
+    }
+
+    .phi-text p {
+        font-size: 0.95rem;
+    }
+}
+
+/* -----------------------------------------------------------------------------------------------------  */
+
+/* --- Адаптивность для секции Стоимость --- */
+        /* PRICE */
+/* Планшеты (до 1024px) */
+@media (max-width: 1024px) {
+    .pricing-title {
+        font-size: 2.8rem;
+    }
+    .price-value {
+        font-size: 4rem; /* Немного уменьшаем цену */
+    }
+    .container {
+        width: 85%;
+    }
+}
+
+/* Смартфоны (до 768px) */
+@media (max-width: 768px) {
+    .pricing {
+        padding: 60px 0;
+        background-attachment: scroll; /* Для плавности на мобильных */
+    }
+
+    .pricing-title {
+        font-size: 2.2rem;
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    /* Переводим сетку цен в одну колонку */
+    .price-grid {
+        grid-template-columns: 1fr;
+        gap: 50px;
+        text-align: center;
+    }
+
+    .price-column {
+        padding: 20px;
+        background: rgba(255, 255, 255, 0.03); /* Легкое выделение карточки */
+        border-radius: 10px;
+    }
+
+    .price-value {
+        font-size: 4.5rem; /* На мобильных цена должна оставаться заметной */
+        margin-top: 10px;
+    }
+
+    .pricing-divider {
+        margin: 30px 0;
+    }
+
+    .format-info {
+        text-align: center;
+    }
+
+    .format-info h3 {
+        font-size: 1.8rem;
+    }
+
+    .format-info p, .format-list li {
+        font-size: 1.1rem;
+    }
+
+    /* Блок уведомления в колонку */
+    .limit-box {
+        flex-direction: column;
+        text-align: center;
+        padding: 25px 15px;
+        gap: 15px;
+    }
+
+    .limit-icon {
+        font-size: 2rem;
+    }
+}
+
+/* Маленькие смартфоны (до 480px) */
+@media (max-width: 480px) {
+    .pricing-title {
+        font-size: 1.8rem;
+    }
+
+    .price-value {
+        font-size: 3.5rem; /* Финальное уменьшение для самых узких экранов */
+    }
+
+    .format-info h3 {
+        font-size: 1.5rem;
+    }
+
+    .price-column h3 {
+        font-size: 1.4rem;
     }
 }

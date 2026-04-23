@@ -127,3 +127,8 @@ document.addEventListener('DOMContentLoaded', () => {
         observer.observe(el);
     });
 });
+
+// Просто добавьте этот класс в ваш существующий document.querySelectorAll
+const elementsToAnimate = document.querySelectorAll(
+    '.price-column, .pricing-divider, .format-info, .limit-box'
+);
