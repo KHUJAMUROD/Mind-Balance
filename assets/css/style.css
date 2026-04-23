@@ -740,6 +740,24 @@ body {
         width: 90%;
     }
 
+    .about .container {
+        padding: 25px 20px;
+        margin-bottom: 20px;
+        text-align: left;
+        /* Оставляем выравнивание по левому краю для списков */
+        background: rgba(109, 26, 46, 0.25);
+        border-radius: 25px;
+        border: 1.5px solid rgba(74, 15, 31, 0.670);
+        border-left: rgba(212, 175, 55, 0.4) 3px solid;
+        transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    }
+
+    .about .container:hover {
+        border-color: #D4AF37;
+        background: rgba(74, 15, 31, 0.376);
+        transform: translateY(-5px);
+    }
+
     .about-title {
         font-size: 2rem;
         text-align: center;
@@ -916,19 +934,20 @@ body {
     }
 
     .benefits .container {
-        padding: 20px 15px;
-        background-color: rgba(255, 255, 255, 0.07);
-        /* Делаем карточку чуть светлее для контраста */
-        background: rgba(74, 15, 31, 0.670);
+        padding: 25px 20px;
+        margin-bottom: 20px;
+        text-align: left;
+        /* Оставляем выравнивание по левому краю для списков */
+        background: rgba(109, 26, 46, 0.25);
         border-radius: 25px;
         border: 1.5px solid rgba(74, 15, 31, 0.670);
-        border-left: 3px solid #C9A227;
+        border-left: rgba(212, 175, 55, 0.4) 3px solid;
         transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
     }
 
     .benefits .container:hover {
-        background: rgba(109, 26, 46, 0.25);
-        border-color: rgba(212, 175, 55, 0.4);
+        border-color: #D4AF37;
+        background: rgba(74, 15, 31, 0.376);
         transform: translateY(-5px);
     }
 
@@ -1032,19 +1051,20 @@ body {
     }
 
     .why-baku .container {
-        padding: 20px 15px;
-        background-color: rgba(255, 255, 255, 0.07);
-        /* Делаем карточку чуть светлее для контраста */
-        background: rgba(74, 15, 31, 0.670);
+        padding: 25px 20px;
+        margin-bottom: 20px;
+        text-align: left;
+        /* Оставляем выравнивание по левому краю для списков */
+        background: rgba(109, 26, 46, 0.25);
         border-radius: 25px;
         border: 1.5px solid rgba(74, 15, 31, 0.670);
-        border-left: 3px solid #C9A227;
+        border-left: rgba(212, 175, 55, 0.4) 3px solid;
         transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
     }
 
     .why-baku .container:hover {
-        background: rgba(109, 26, 46, 0.25);
-        border-color: rgba(212, 175, 55, 0.4);
+        border-color: #D4AF37;
+        background: rgba(74, 15, 31, 0.376);
         transform: translateY(-5px);
     }
 
@@ -1131,19 +1151,20 @@ body {
     }
 
     .philosophy .container {
-        padding: 20px 15px;
-        background-color: rgba(255, 255, 255, 0.07);
-        /* Делаем карточку чуть светлее для контраста */
-        background: rgba(74, 15, 31, 0.670);
+        padding: 25px 20px;
+        margin-bottom: 20px;
+        text-align: left;
+        /* Оставляем выравнивание по левому краю для списков */
+        background: rgba(109, 26, 46, 0.25);
         border-radius: 25px;
         border: 1.5px solid rgba(74, 15, 31, 0.670);
-        border-left: 3px solid #C9A227;
+        border-left: rgba(212, 175, 55, 0.4) 3px solid;
         transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
     }
 
     .philosophy .container:hover {
-        background: rgba(109, 26, 46, 0.25);
-        border-color: rgba(212, 175, 55, 0.4);
+        border-color: #D4AF37;
+        background: rgba(74, 15, 31, 0.376);
         transform: translateY(-5px);
     }
 
@@ -1254,19 +1275,20 @@ body {
     }
 
     .pricing .container {
-        padding: 20px 15px;
-        background-color: rgba(255, 255, 255, 0.07);
-        /* Делаем карточку чуть светлее для контраста */
-        background: rgba(74, 15, 31, 0.670);
+        padding: 25px 20px;
+        margin-bottom: 20px;
+        text-align: left;
+        /* Оставляем выравнивание по левому краю для списков */
+        background: rgba(109, 26, 46, 0.25);
         border-radius: 25px;
         border: 1.5px solid rgba(74, 15, 31, 0.670);
-        border-left: 3px solid #C9A227;
+        border-left: rgba(212, 175, 55, 0.4) 3px solid;
         transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
     }
 
     .pricing .container:hover {
-        background: rgba(109, 26, 46, 0.25);
-        border-color: rgba(212, 175, 55, 0.4);
+        border-color: #D4AF37;
+        background: rgba(74, 15, 31, 0.376);
         transform: translateY(-5px);
     }
 
