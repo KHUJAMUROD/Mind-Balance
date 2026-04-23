@@ -1383,7 +1383,6 @@ body {
     .target-audience {
         padding: 60px 0;
         background-attachment: scroll;
-        padding: 120px 0;
         background:
             linear-gradient(rgba(0, 0, 0, 0.544)),
             url('/assets/img/target.jpg') no-repeat center center/cover;
