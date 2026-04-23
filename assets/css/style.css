@@ -1,0 +1,640 @@
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /* Меняем шрифт на Cormorant Garamond */
+    font-family: 'Cormorant Garamond', serif;
+    background-color: #1C1C1C;
+    /* Глубокий графит */
+    color: #F7E7CE;
+    /* Светлый шампань для текста */
+    line-height: 1.6;
+}
+
+/* --- Общие элементы стиля --- */
+.gold-text {
+    color: #D4AF37;
+}
+
+.gold-gradient-text {
+    background: linear-gradient(45deg, #C9A227, #E6C65C);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* --- Hero Section --- */
+.hero {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding-bottom: 10vh;
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.544)),
+        url('/assets/img/hero-image.jpg') no-repeat center center/cover;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Градиент уходит в глубокий бургунди */
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 900px;
+    width: 85%;
+    background: rgba(74, 15, 31, 0.670); /* Полупрозрачный бургунди */
+    padding: 40px;
+    border-radius: 25px; /* Острые углы выглядят строже и дороже */
+    border-left: #D4AF37 3px solid; /* Классическое золото */
+    margin-bottom: 5%;
+    backdrop-filter: blur(8px);
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.hero-content:hover {
+    background: rgba(109, 26, 46, 0.25);
+    border-color: rgba(212, 175, 55, 0.4);
+    transform: translateY(-5px);
+}
+
+.hero-title {
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    color: #E6C65C;
+    /* Мягкое сияющее золото */
+    margin-bottom: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.hero-subtitle {
+    font-size: clamp(1.2rem, 3vw, 1.8rem);
+    margin-bottom: 25px;
+    color: #F1DDC4;
+    /* Теплый шампань */
+    font-weight: 400;
+}
+
+.hero-btn {
+    padding: 18px 45px;
+    background: transparent;
+    border: 1px solid #D4AF37;
+    color: #D4AF37;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    display: inline-block;
+}
+
+.hero-btn:hover {
+    background: #D4AF37;
+    color: #4A0F1F;
+    /* Бургунди при наведении */
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
+}
+
+/* --- About Section --- */
+.about {
+    position: relative;
+    padding: 120px 0;
+    
+    /* Наложение бургунди на фон */
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.544)),
+        url('/assets/img/about-section.jpg') no-repeat center center/cover;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+}
+
+.about .container {
+    position: relative;
+    z-index: 2;
+    max-width: 900px;
+    width: 90%;
+    background: rgba(74, 15, 31, 0.670);
+    padding: 60px;
+    border-radius: 25px;
+    border-left: #C9A227 3px solid;
+    backdrop-filter: blur(8px);
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.about .container:hover {
+    background: rgba(109, 26, 46, 0.25);
+    border-color: rgba(212, 175, 55, 0.4);
+    transform: translateY(-5px);
+}
+
+.about-title {
+    font-size: 3.5rem;
+    color: #D4AF37;
+    font-weight: 700;
+    margin-bottom: 40px;
+    line-height: 1.1;
+}
+
+.about-content p {
+    font-size: 1.3rem;
+    /* Чуть крупнее для Cormorant */
+    line-height: 1.7;
+    margin-bottom: 25px;
+    color: #F7E7CE;
+}
+
+.about-content p strong {
+    color: #E6C65C;
+    font-size: 1.4rem;
+}
+
+/* --- Creators Section --- */
+.creators {
+    position: relative;
+    padding: 80px 0;
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.544)),
+        url('/assets/img/hero-image.jpg') no-repeat center center/cover;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+}
+
+.creators-title {
+    font-size: 3.5rem;
+    color: #D4AF37;
+    font-weight: 700;
+    margin-bottom: 60px;
+    text-align: center;
+}
+
+.creator-card {
+    margin: 0 auto;
+    background: rgba(74, 15, 31, 0.670);
+    /* Очень тонкий слой Бургунди */
+    padding: 50px;
+    margin-bottom: 40px;
+    border: 1.5px solid rgba(74, 15, 31, 0.670);
+    border-left: 3px solid #C9A227;
+    border-radius: 25px;
+    width: 75%;
+    backdrop-filter: blur(15px);
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.creator-card:hover {
+    background: rgba(109, 26, 46, 0.25);
+    border-color: rgba(212, 175, 55, 0.4);
+    transform: translateY(-5px);
+}
+
+.creator-name {
+    font-size: 2.2rem;
+    color: #E6C65C;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.creator-list li {
+    font-size: 1.2rem;
+    color: #F1DDC4;
+    margin-bottom: 15px;
+    padding-left: 30px;
+}
+
+.creator-list li::before {
+    content: "◈";
+    /* Более премиальный маркер (ромб) */
+    color: #D4AF37;
+    font-size: 1.2rem;
+}
+
+/* --- Benefits Section --- */
+.benefits {
+    position: relative;
+    padding: 100px 0;
+    /* Тот же фон для бесшовности */
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.544)),
+        url('/assets/img/about-section.jpg') no-repeat center center/cover;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+}
+
+.benefits .container {
+    max-width: 900px;
+    width: 90%;
+    background: rgba(74, 15, 31, 0.670);
+    padding: 60px;
+    border-radius: 25px;
+    border-left: #C9A227 3px solid;
+    backdrop-filter: blur(8px);
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.benefits .container:hover {
+    background: rgba(109, 26, 46, 0.25);
+    border-color: rgba(212, 175, 55, 0.4);
+    transform: translateY(-5px);
+}
+
+.benefits-title {
+    font-size: 3.5rem;
+    color: #D4AF37;
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 700;
+    margin-bottom: 60px;
+    line-height: 1.1;
+}
+
+.benefit-item {
+    display: flex;
+    gap: 25px;
+    margin-bottom: 40px;
+    background: rgba(255, 255, 255, 0.02);
+    padding: 20px;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.benefit-item:hover {
+    background: rgba(255, 255, 255, 0.05);
+    transform: translateX(10px);
+}
+
+.benefit-icon {
+    font-size: 1.8rem;
+    color: #D4AF37;
+    margin-top: 5px;
+}
+
+.benefit-text h3 {
+    font-size: 1.8rem;
+    color: #E6C65C;
+    margin-bottom: 10px;
+    font-family: 'Cormorant Garamond', serif;
+}
+
+.benefit-text p {
+    font-size: 1.1rem;
+    color: #F1DDC4;
+    line-height: 1.5;
+}
+
+/* Блок Dress Code в стиле макета */
+.dress-code-box {
+    margin-top: 60px;
+    background: rgba(109, 26, 46, 0.3);
+    /* Приглушенный Бургунди */
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    backdrop-filter: blur(10px);
+}
+
+.dress-code-box p {
+    color: #F7E7CE;
+    font-size: 1.2rem;
+}
+
+.dress-icon {
+    color: #D4AF37;
+    font-size: 1.5rem;
+}
+
+
+
+
+/* -----------------------------------------------------------------------------------------------------  */
+/* -----------------------------------------------------------------------------------------------------  */
+/* -----------------------------------------------------------------------------------------------------  */
+
+/* --- Адаптивность --- */
+/* Планшеты (до 1024px) */
+@media (max-width: 1024px) {
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .hero-content {
+        width: 85%;
+    }
+}
+
+/* Смартфоны (до 768px) */
+@media (max-width: 768px) {
+    .hero {
+        align-items: center;
+        /* Центрируем текст по вертикали на мобильных */
+        padding-bottom: 0;
+        text-align: center;
+        /* Текст по центру для лучшего баланса */
+    }
+
+    .hero-content {
+        text-align: center;
+        /* Выравнивание контента по центру */
+    }
+
+    .hero-title {
+        font-size: 2rem;
+        /* Уменьшаем заголовок */
+        margin-bottom: 15px;
+    }
+
+    .hero-subtitle {
+        font-size: 1.2rem;
+        margin-bottom: 20px;
+    }
+
+    .hero-description {
+        font-size: 0.9rem;
+        padding: 0 10px;
+    }
+
+    .hero-btn {
+        width: 100%;
+        /* Кнопка на всю ширину для удобного нажатия пальцем */
+        max-width: 280px;
+        padding: 18px;
+    }
+}
+
+/* Маленькие смартфоны (до 480px) */
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 1.6rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+
+    .hero-overlay {
+        /* Более плотный градиент на маленьких экранах для читаемости */
+        background: rgba(0, 0, 0, 0.6);
+    }
+}
+
+/* -----------------------------------------------------------------------------------------------------  */
+
+/* --- Адаптивность для второго блока --- */
+/* Планшеты (до 1024px) */
+@media (max-width: 1024px) {
+    .container {
+        width: 80%;
+        /* Немного сужаем контейнер для красоты */
+    }
+
+    .about-title {
+        font-size: 2.5rem;
+    }
+}
+
+/* Смартфоны (до 768px) */
+@media (max-width: 768px) {
+    .about {
+        padding: 60px 0;
+        /* Уменьшаем вертикальные отступы */
+    }
+
+    .container {
+        width: 90%;
+    }
+
+    .about-title {
+        font-size: 2rem;
+        text-align: center;
+        /* Центрируем заголовок */
+        margin-bottom: 30px;
+    }
+
+    .about-content p {
+        font-size: 1rem;
+        text-align: center;
+        /* Центрируем текст для мобильных */
+        line-height: 1.5;
+        margin-bottom: 20px;
+    }
+
+    /* Делаем выделение (highlight) более заметным на узких экранах */
+    .highlight {
+        display: inline-block;
+        /* Чтобы рамка не разрывалась некрасиво */
+        padding: 2px 8px;
+        margin: 2px 0;
+    }
+
+    .footer-note {
+        text-align: center;
+        font-size: 1rem;
+    }
+}
+
+/* Маленькие смартфоны (до 480px) */
+@media (max-width: 480px) {
+    .about-title {
+        font-size: 1.7rem;
+        line-height: 1.1;
+    }
+
+    .about-content p {
+        font-size: 0.95rem;
+    }
+
+    .stats {
+        display: block;
+        /* Выделяем статистику в отдельный блок */
+        padding: 10px;
+        border: 1px dashed #e0c07d;
+        margin: 20px 0;
+    }
+}
+
+/* -----------------------------------------------------------------------------------------------------  */
+
+/* --- Адаптивность для секции Создатели --- */
+/* Планшеты (до 1024px) */
+@media (max-width: 1024px) {
+    .creator-card {
+        padding: 35px;
+    }
+}
+
+/* Смартфоны (до 768px) */
+@media (max-width: 768px) {
+    .creators {
+        padding: 60px 0;
+        /* Уменьшаем внешние отступы секции */
+    }
+
+    .creators-title {
+        font-size: 2.2rem;
+        /* Уменьшаем заголовок */
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    .creator-card {
+        padding: 25px 20px;
+        margin-bottom: 20px;
+        text-align: left;
+        /* Оставляем выравнивание по левому краю для списков */
+    }
+
+    .creator-name {
+        font-size: 1.5rem;
+        text-align: center;
+        /* Имя лучше отцентрировать на мобильном */
+    }
+
+    .creator-role {
+        font-size: 1rem;
+        text-align: center;
+        /* Описание роли тоже центрируем */
+        margin-bottom: 25px;
+    }
+
+    .creator-list li {
+        font-size: 0.95rem;
+        /* Немного уменьшаем шрифт списка */
+        line-height: 1.4;
+    }
+}
+
+/* Маленькие смартфоны (до 480px) */
+@media (max-width: 480px) {
+    .creators-title {
+        font-size: 1.8rem;
+    }
+
+    .creator-card {
+        padding: 20px 15px;
+        background-color: rgba(255, 255, 255, 0.07);
+        /* Делаем карточку чуть светлее для контраста */
+    }
+
+    .creator-name {
+        font-size: 1.3rem;
+    }
+
+    .creator-list li {
+        font-size: 0.9rem;
+        padding-left: 25px;
+        /* Увеличиваем отступ для точки, чтобы текст не налезал */
+    }
+}
+
+/* -----------------------------------------------------------------------------------------------------  */
+
+/* --- Адаптивность для секции Преимущества --- */
+/* Планшеты (до 1024px) */
+@media (max-width: 1024px) {
+    .benefits-title {
+        font-size: 2.8rem;
+    }
+
+    .benefit-item {
+        padding: 30px;
+    }
+}
+
+/* Смартфоны (до 768px) */
+@media (max-width: 768px) {
+    .benefits {
+        padding: 60px 0;
+        background-attachment: scroll;
+        /* Для плавности на мобильных */
+    }
+
+    .benefits-title {
+        font-size: 2.2rem;
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    /* Перестраиваем в колонку: иконка сверху, текст снизу */
+    .benefit-item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 15px;
+        padding: 25px;
+        background: rgba(255, 255, 255, 0.04);
+        border-left: none;
+        /* Убираем боковую линию, если она была */
+        border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+        /* Легкий разделитель снизу */
+    }
+
+    .benefit-item:hover {
+        transform: translateY(-5px);
+        /* На мобильных лучше сдвиг вверх, чем вправо */
+    }
+
+    .benefit-icon {
+        font-size: 2.5rem;
+        /* Увеличиваем иконку для акцента */
+        margin-top: 0;
+    }
+
+    .benefit-text h3 {
+        font-size: 1.6rem;
+    }
+
+    .benefit-text p {
+        font-size: 1rem;
+    }
+
+    /* Адаптив для блока Dress Code */
+    .dress-code-box {
+        margin-top: 40px;
+        flex-direction: column;
+        text-align: center;
+        padding: 25px;
+        gap: 15px;
+    }
+
+    .dress-code-box p {
+        font-size: 1.1rem;
+        line-height: 1.4;
+    }
+}
+
+/* Маленькие смартфоны (до 480px) */
+@media (max-width: 480px) {
+    .benefits-title {
+        font-size: 1.8rem;
+    }
+
+    .benefit-text h3 {
+        font-size: 1.4rem;
+    }
+
+    .benefit-text p {
+        font-size: 0.95rem;
+    }
+
+    .dress-code-box p {
+        font-size: 1rem;
+    }
+}
