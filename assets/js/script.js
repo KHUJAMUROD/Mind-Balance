@@ -1,202 +1,120 @@
-/* -----------------------------------------------------------------------------------------------------  */
-// Nav Bar //
+!function(){
+            var u = window.UnicornStudio;
+            if (u && u.init) {
+                if (document.readyState === "loading") {
+                    document.addEventListener("DOMContentLoaded", function(){
+                        u.init();
+                        document.getElementById('hero').classList.remove('hero-loading');
+                        removeWatermark();
+                    });
+                } else {
+                    u.init();
+                    document.getElementById('hero').classList.remove('hero-loading');
+                    removeWatermark();
+                }
+            } else {
+                window.UnicornStudio = { isInitialized: false };
+                var i = document.createElement("script");
+                i.src = "https://cdn.jsdelivr.net/gh/hiunicornstudio/unicornstudio.js@v2.1.9/dist/unicornStudio.umd.js";
+                i.onload = function(){
+                    if (document.readyState === "loading") {
+                        document.addEventListener("DOMContentLoaded", function(){
+                            UnicornStudio.init();
+                            document.getElementById('hero').classList.remove('hero-loading');
+                            removeWatermark();
+                        });
+                    } else {
+                        UnicornStudio.init();
+                        document.getElementById('hero').classList.remove('hero-loading');
+                        removeWatermark();
+                    }
+                };
+                (document.head || document.body).appendChild(i);
+            }
+        }();
 
-// 1. Изменение шапки при скролле
-// window.addEventListener('scroll', () => {
-//     const nav = document.querySelector('.navbar');
-//     if (window.scrollY > 50) {
-//         nav.classList.add('scrolled');
-//     } else {
-//         nav.classList.remove('scrolled');
-//     }
-// });
+        // Функция удаления watermark
+        function removeWatermark() {
+            // Метод 1: CSS уже скрывает через селекторы
+            // Метод 2: JS удаляет элементы принудительно
+            const selectors = [
+                '[class*="watermark"]',
+                '[class*="badge"]',
+                'a[href*="unicorn.studio"]',
+                '.unicorn-badge',
+                '.us-badge'
+            ];
+            
+            selectors.forEach(selector => {
+                document.querySelectorAll(selector).forEach(el => {
+                    if (el.textContent.includes('unicorn') || el.href?.includes('unicorn')) {
+                        el.style.display = 'none';
+                        el.style.opacity = '0';
+                        el.style.visibility = 'hidden';
+                        el.remove();
+                    }
+                });
+            });
 
-// 2. Мобильное меню
-// const burger = document.querySelector('.burger');
-// const navLinks = document.querySelector('.nav-links');
+            // Метод 3: MutationObserver для динамически добавляемых элементов
+            const observer = new MutationObserver((mutations) => {
+                mutations.forEach((mutation) => {
+                    mutation.addedNodes.forEach((node) => {
+                        if (node.nodeType === 1) { // Element node
+                            if (node.textContent?.includes('unicorn.studio') || 
+                                node.href?.includes('unicorn.studio') ||
+                                node.className?.includes('watermark')) {
+                                node.style.display = 'none';
+                                node.remove();
+                            }
+                            // Проверяем дочерние элементы
+                            node.querySelectorAll?.('a, div, span').forEach(child => {
+                                if (child.textContent?.includes('unicorn.studio') || 
+                                    child.href?.includes('unicorn.studio')) {
+                                    child.style.display = 'none';
+                                    child.remove();
+                                }
+                            });
+                        }
+                    });
+                });
+            });
 
-// burger.addEventListener('click', () => {
-//     navLinks.classList.toggle('active');
-//     // Анимация бургера
-//     burger.classList.toggle('toggle');
-// });
+            observer.observe(document.body, {
+                childList: true,
+                subtree: true
+            });
 
-// Закрытие меню при клике на ссылку
-// document.querySelectorAll('.nav-links a').forEach(link => {
-//     link.addEventListener('click', () => {
-//         navLinks.classList.remove('active');
-//     });
-// });
-
-/* -----------------------------------------------------------------------------------------------------  */
-// Hero //
-
-window.addEventListener('DOMContentLoaded', () => {
-    const content = document.querySelector('.hero-content');
-    content.style.opacity = '0';
-    content.style.transform = 'translateY(20px)';
-    content.style.transition = 'all 1s ease-out';
-
-    setTimeout(() => {
-        content.style.opacity = '1';
-        content.style.transform = 'translateY(0)';
-    }, 300);
-});
-
-/* -----------------------------------------------------------------------------------------------------  */
-// About Section //
-
-const observerOptions = {
-    threshold: 0.1
-};
-
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.style.opacity = '1';
-            entry.target.style.transform = 'translateY(0)';
+            // Остановим observer через 5 секунд после загрузки
+            setTimeout(() => observer.disconnect(), 5000);
         }
-    });
-}, observerOptions);
 
-document.addEventListener('DOMContentLoaded', () => {
-    const aboutSection = document.querySelector('.about-content');
-    aboutSection.style.opacity = '0';
-    aboutSection.style.transform = 'translateY(30px)';
-    aboutSection.style.transition = 'all 0.8s ease-out';
-
-    observer.observe(aboutSection);
-});
-
-/* -----------------------------------------------------------------------------------------------------  */
-// Creators Section //
-
-document.addEventListener('DOMContentLoaded', () => {
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.style.opacity = '1';
-                entry.target.style.transform = 'translateY(0)';
-            }
+        // Повторная проверка после полной загрузки
+        window.addEventListener('load', () => {
+            setTimeout(removeWatermark, 1000);
+            setTimeout(removeWatermark, 2000);
         });
-    }, { threshold: 0.1 });
 
-    // Применяем анимацию к карточкам создателей
-    document.querySelectorAll('.creator-card').forEach(card => {
-        card.style.opacity = '0';
-        card.style.transform = 'translateY(40px)';
-        card.style.transition = 'all 0.8s ease-out';
-        observer.observe(card);
-    });
-});
-
-/* -----------------------------------------------------------------------------------------------------  */
-// Benefits Section //
-
-document.addEventListener('DOMContentLoaded', () => {
-    const benefitObserver = new IntersectionObserver((entries) => {
-        entries.forEach((entry, index) => {
-            if (entry.isIntersecting) {
-                // Добавляем небольшую задержку для каждого следующего элемента
-                setTimeout(() => {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                }, index * 150);
-            }
+        // Плавная прокрутка для кнопок
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
         });
-    }, { threshold: 0.1 });
-    
-    document.querySelectorAll('.benefit-item, .dress-code-box').forEach(el => {
-        el.style.opacity = '0';
-        el.style.transform = 'translateY(30px)';
-        el.style.transition = 'all 0.6s ease-out';
-        benefitObserver.observe(el);
-    });
-});
 
-/* -----------------------------------------------------------------------------------------------------  */
-// Why Baku Section //
-
-document.addEventListener('DOMContentLoaded', () => {
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry, index) => {
-            if (entry.isIntersecting) {
-                setTimeout(() => {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                }, index * 100);
-            }
-        });
-    }, { threshold: 0.1 });
-
-    document.querySelectorAll('.why-card').forEach(el => {
-        el.style.opacity = '0';
-        el.style.transform = 'translateY(20px)';
-        el.style.transition = 'all 0.8s ease-out';
-        observer.observe(el);
-    });
-});
-
-/* -----------------------------------------------------------------------------------------------------  */
-// Philosiphty Section //
-
-const elementsToAnimate = document.querySelectorAll(
-    '.phi-circle-visual, .phi-item, .philosophy-header'
-);
-
-/* -----------------------------------------------------------------------------------------------------  */
-// Target Section //
-
-const elementsToAnimate = document.querySelectorAll(
-    '.target-item, .target-title'
-);
-
-/* -----------------------------------------------------------------------------------------------------  */
-// Price Section //
-
-const elementsToAnimate = document.querySelectorAll(
-    '.price-column, .pricing-divider, .format-info, .limit-box'
-);
-
-/* -----------------------------------------------------------------------------------------------------  */
-// Program //
-
-const elementsToAnimate = document.querySelectorAll(
-    '.timeline-item, .program-footer, .program-title'
-);
-
-/* -----------------------------------------------------------------------------------------------------  */
-// Cta-Final Footer //
-
-const elementsToAnimate = document.querySelectorAll(
-    '.cta-title, .cta-text p, .cta-question, .cta-buttons, .cta-footer-note'
-);
-
-/* -----------------------------------------------------------------------------------------------------  */
-// Nav Bar Burger //
-
-// burger.addEventListener('click', () => {
-//     navLinks.classList.toggle('active');
-//     burger.classList.toggle('toggle'); // Эта строка анимирует полоски в крестик
-// });
-
-
-/* -----------------------------------------------------------------------------------------------------  */
-// Scrolling //
-
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault(); // Отменяем мгновенный прыжок
-        
-        const targetId = this.getAttribute('href'); // Получаем id цели (например, #about)
-        const targetElement = document.querySelector(targetId);
-        
-        if (targetElement) {
-            // Рассчитываем позицию
-            window.scrollTo({
-                top: targetElement.offsetTop,
-                behavior: 'smooth' // Тот самый плавный эффект
+        // Параллакс-эффект при движении мыши (только на десктопе)
+        if (window.matchMedia('(pointer: fine)').matches) {
+            const heroContent = document.querySelector('.hero-content');
+            document.addEventListener('mousemove', (e) => {
+                const x = (window.innerWidth / 2 - e.pageX) / 50;
+                const y = (window.innerHeight / 2 - e.pageY) / 50;
+                heroContent.style.transform = `translate(${x}px, ${y}px)`;
             });
         }
-    });
-});
