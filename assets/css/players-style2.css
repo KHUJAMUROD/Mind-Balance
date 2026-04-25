@@ -17,7 +17,7 @@ body {
 .container {
     /* background-color: #1a1a1a; */
     background: linear-gradient(#1c1c1c90),
-        url('/assets/img/image/Hero.jpg') center / cover no-repeat;
+        url('/assets/img/image/Hero.jpg.png') center / cover no-repeat;
     padding: 20px;
     justify-content: center;
     align-items: center;
@@ -80,7 +80,22 @@ body {
     font-weight: bold;
 }
 
+/* Mobil qurilmalar uchun moslashuvchanlik (Responsive) */
+/* @media (max-width: 600px,) {
+    .main-title {
+        font-size: 2rem;
+    }
 
+    .sub-title {
+        font-size: 1.3rem;
+    }
+
+    .info-section {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+} */
 
 
 @media (max-width: 992px) {
@@ -170,7 +185,7 @@ body {
 
 .quiz-section {
     background: linear-gradient(#1c1c1c90),
-        url('/assets/img/image/Grandfather.jpg') center / cover no-repeat;
+        url('/assets/img/image/Grandfather.jpg.png') center / cover no-repeat;
     width: 100%;
     height: 100vh;
     padding-bottom: 10px;
@@ -282,7 +297,7 @@ body {
 
 .process-section {
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)),
-        url('/assets/img/image/People.jpg') center / cover no-repeat;
+        url('/assets/img/image/People.png') center / cover no-repeat;
     width: 100%;
     height: 100%;
     min-height: 100vh;
@@ -373,7 +388,7 @@ body {
 
 .solution-block-wrapper {
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)),
-        url('/assets/img/image/Shaxmat.jpg') center / cover no-repeat;
+        url('/assets/img/image/Shaxmat.png.png') center / cover no-repeat;
     width: 100%;
     min-height: 100vh;
     /* padding: 100px 20px; */
@@ -496,7 +511,7 @@ body {
 
 .zapr-block-wrapper {
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)),
-        url('/assets/img/image/Shahar.sky.jpg') center / cover no-repeat;
+        url('/assets/img/image/Shahar.sky.png') center / cover no-repeat;
     width: 100%;
     min-height: 100vh;
     /* padding: 100px 20px; */
@@ -613,7 +628,7 @@ body {
 
 .fest-stats-section {
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)),
-        url('/assets/img/image/Olov-olov.jpg') center / cover no-repeat;
+        url('/assets/img/image/Olov-olov.png') center / cover no-repeat;
     width: 100%;
     height: 100%;
     min-height: 100vh;
@@ -732,7 +747,7 @@ body {
 
 .path-section-wrapper {
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)),
-        url('/assets/img/image/Kechki-party.jpg') center / cover no-repeat;
+        url('/assets/img/image/Kechki-party.png') center / cover no-repeat;
     width: 100%;
     /* height: 100%; */
     min-height: 100vh;
@@ -848,7 +863,7 @@ body {
 
 .atm-section-container {
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)),
-        url('/assets/img/image/Birthday.jpg') center / cover no-repeat;
+        url('/assets/img/image/Birthday.png') center / cover no-repeat;
     width: 100%;
     min-height: 100vh;
     padding: 80px 20px;
@@ -971,7 +986,7 @@ body {
 
 .price-section-container {
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)),
-        url('/assets/img/image/Keys-kalit.jpg') center / cover no-repeat;
+        url('/assets/img/image/Keys-kalit.png') center / cover no-repeat;
     width: 100%;
     min-height: 100vh;
     padding: 100px 20px;
@@ -1104,7 +1119,7 @@ body {
 /* Основная секция */
 .final-cta-section {
     background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7)),
-        url('/assets/img/image/Ocean.jpg') center / cover no-repeat;
+        url('/assets/img/image/Ocean.png') center / cover no-repeat;
     width: 100%;
     min-height: 100vh;
     /* Используем min-height вместо height */
@@ -1197,9 +1212,8 @@ body {
     display: inline-block;
     width: 100%;
     max-width: 400px;
-    /* opacity: 0.5; */
     padding: 18px 45px;
-    background: linear-gradient(135deg, #e6c27a92 0%, #b38a4d88 100%);
+    background: linear-gradient(135deg, #e6c27a 0%, #b38a4d 100%);
     color: #1a1a1a;
     text-decoration: none;
     font-weight: bold;
@@ -1232,328 +1246,5 @@ body {
 
     .final-check-list li {
         font-size: 1rem !important;
-    }
-}
-
-
-/* Tugma uchun umumiy o'ram (wrapper) */
-.maps-wrapper {
-    margin-top: 25px;
-    display: flex;
-    justify-content: center;
-    /* Markazga tekislash */
-    padding: 0 15px;
-}
-
-/* Asosiy tugma stili */
-.maps-button {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    padding: 12px 24px;
-    /* opacity: 0.5; */
-    /* background-color: #ffffff; */
-    /* background: linear-gradient(135deg, #e6c27a92 0%, #b38a4d88 100%); */
-    /* Oq fon */
-    /* color: #333333; */
-    background-color: #d4af37d7;
-    color: #fff;
-    /* Matn rangi */
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 16px;
-    border-radius: 50px;
-    /* Yumaloq shakl */
-    /* border: 1px solid #e0e0e0; */
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-}
-
-/* Sishqoncha bilan ustiga kelganda effekt */
-.maps-button:hover {
-    background-color: #d4af37aa;
-    border-color: #fff;
-    transform: translateY(3px);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
-    /* border-color: #d4af37; */
-    /* Festivalning oltin rangiga moslashish */
-}
-
-/* Mobil qurilmalar uchun moslashuv (Responsive) */
-@media (max-width: 480px) {
-    .maps-button {
-        width: 100%;
-        /* Mobil telefonda tugma to'liq eni bo'yicha cho'ziladi */
-        justify-content: center;
-        font-size: 15px;
-        padding: 14px 20px;
-    }
-}
-
-/* Sahifa silliq tushishi uchun */
-html {
-    scroll-behavior: smooth;
-}
-
-.maps-wrapper {
-    display: flex;
-    flex-direction: column;
-    /* Tugmalarni ustma-ust qo'yish */
-    align-items: center;
-    gap: 15px;
-    /* Tugmalar orasidagi masofa */
-    margin-top: 25px;
-}
-
-/* Asosiy tugmalarning umumiy stili */
-.maps-button,
-.scroll-down-btn {
-    display: inline-block;
-    padding: 14px 28px;
-    text-decoration: none;
-    font-weight: 600;
-    border-radius: 50px;
-    transition: all 0.3s ease;
-    text-align: center;
-    min-width: 250px;
-    /* Tugmalar bir xil uzunlikda bo'lishi uchun */
-}
-
-/* Registratsiya tugmasi stili (Oltin/Sariq) */
-/* .maps-button {
-    background-color: #d4af37d7;
-    color: #fff;
-    border: none;
-    box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
-} */
-
-/* Oxirgi slaydga o'tish tugmasi stili (Shaffof/Chegaralangan) */
-.scroll-down-btn {
-    background-color: #d4af37d7;
-    color: #fff;
-    border: none;
-    box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
-}
-
-.scroll-down-btn:hover {
-    background-color: #d4af37aa;
-    border-color: #fff;
-    transform: translateY(3px);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
-    /* Bosilganda pastga harakat */
-}
-
-/* .maps-button:hover { */
-/* filter: brightness(1.1);
-    transform: scale(1.02); */
-/* transform: translateY(-2px); */
-/* box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15); */
-/* background-color: #f8f8f881; */
-/* border-color: #d4af37; */
-/* } */
-
-/* Responsive: Planshet va Kompyuter uchun yonma-yon qo'yish */
-@media (min-width: 600px) {
-    .maps-wrapper {
-        flex-direction: row;
-        justify-content: center;
-    }
-}
-
-/* Mobil uchun */
-@media (max-width: 480px) {
-
-    .maps-button,
-    .scroll-down-btn {
-        width: 100%;
-        font-size: 14px;
-    }
-}
-
-/* * Flex o'ram */
-*/ .final-flex-wrapper {
-    display: flex;
-    gap: 40px;
-    align-items: flex-start;
-    justify-content: space-between;
-    margin-bottom: 30px;
-}
-
-/* Chap tomon kengligi */
-.final-content-left {
-    flex: 1;
-    text-align: left;
-}
-
-/* O'ng tomon (Xarita qismi) */
-.final-content-right {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
-}
-
-/* Xarita konteyneri responsive bo'lishi uchun */
-.map-container {
-    width: 100%;
-    max-width: 500px;
-    height: 400px;
-    /* Balandlikni biroz moslashtirdik */
-    border-radius: 15px;
-    overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-}
-
-/* Tugmalar stili */
-.final-gold-button {
-    display: inline-block;
-    padding: 15px 30px;
-    background-color: #d4af37;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 50px;
-    font-weight: bold;
-    transition: 0.3s;
-    text-align: center;
-}
-
-.google-maps-btn {
-    width: 100%;
-    max-width: 500px;
-    background-color: #4285F4;
-    /* Google ko'k rangi */
-}
-
-.final-gold-button:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-}
-
-/* RESPONSIVE (Mobil qurilmalar uchun) */
-@media (max-width: 992px) {
-    .final-flex-wrapper {
-        flex-direction: column;
-        /* Ustma-ust tushadi */
-        align-items: center;
-    }
-
-    .final-content-left {
-        text-align: center;
-        width: 100%;
-    }
-
-    .final-check-list {
-        display: inline-block;
-        text-align: left;
-    }
-
-    .map-container {
-        height: 350px;
-        width: 100%;
-    }
-
-    .final-info-row {
-        justify-content: center;
-    }
-}
-
-@media (max-width: 480px) {
-    .map-container {
-        height: 300px;
-    }
-
-    .final-gold-button {
-        width: 100%;
-        padding: 12px 20px;
-    }
-}
-
-
-/* Konteyner sozlamalari */
-.final-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 40px 20px;
-}
-
-/* Flexbox orqali ikkala ustunni teng qilish */
-.final-flex-wrapper {
-    display: flex;
-    align-items: stretch;
-    /* Bo'yini bir xil qiladi */
-    gap: 30px;
-    /* Oradagi masofa */
-}
-
-/* Har bir ustun 50/50 bo'lishi uchun */
-.final-column {
-    flex: 1;
-    /* Ikkalasi ham bir xil joy egallaydi */
-    display: flex;
-    flex-direction: column;
-}
-
-/* Kontent qismi (matn yoki xarita) */
-.column-content {
-    flex-grow: 1;
-    /* Bo'sh joyni teng taqsimlaydi */
-    display: flex;
-    flex-direction: column;
-}
-
-/* Xaritaning o'zi uchun maxsus o'ram */
-.map-wrapper {
-    width: 100%;
-    height: 100%;
-    /* Ustun bo'yiga moslashadi */
-    min-height: 400px;
-    /* Minimal balandlik (matn uzunligiga qarab) */
-    border-radius: 20px;
-    overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-}
-
-/* IKKALA TUGMA UCHUN BIR XIL STIL (Oltin rang) */
-.final-unified-btn {
-    display: block;
-    width: 100%;
-    /* Eni ustun bilan bir xil */
-    margin-top: 25px;
-    padding: 18px 10px;
-    background-color: #d4af37a2;
-    /* Rasmda ko'ringan oltin rang */
-    color: #ffffff;
-    text-align: center;
-    text-decoration: none;
-    font-weight: 700;
-    font-size: 16px;
-    border-radius: 50px;
-    text-transform: uppercase;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(212, 175, 55, 0.2);
-}
-
-.final-unified-btn:hover {
-    background-color: #bfa030dc;
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4);
-}
-
-/* --- RESPONSIVE (Mobil telefonlar uchun) --- */
-@media (max-width: 900px) {
-    .final-flex-wrapper {
-        flex-direction: column;
-        /* Telefonda ustma-ust tushadi */
-    }
-
-    .map-wrapper {
-        height: 350px;
-        /* Mobil telefonda balandlik */
-        min-height: 350px;
-    }
-
-    .final-column {
-        width: 100%;
     }
 }
