@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Montserrat:wght@300;400;500;600&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -6,7 +8,7 @@
 
 html,
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Montserrat', sans-serif;
     overflow-x: hidden;
     background: #1a0510;
     -webkit-font-smoothing: antialiased;
@@ -20,8 +22,9 @@ body {
     min-height: 100vh;
     min-height: 100dvh;
     display: flex;
-    align-items: flex-end;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
     overflow: hidden;
 }
 
@@ -61,13 +64,75 @@ body {
     z-index: 1;
 }
 
-/* ===== BUTTONS - ВСЕГДА БОК О БОК ===== */
+/* ===== LOGO MOBILE (скрыт на десктопе) ===== */
+.hero-logo-mobile {
+    display: none;
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    animation: fadeInUp 1s ease-out;
+}
+
+.festival-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(1.4rem, 5vw, 2.2rem);
+    font-weight: 300;
+    color: #c9a96e;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    text-shadow: 0 2px 20px rgba(201, 169, 110, 0.3);
+}
+
+.festival-subtitle {
+    font-family: 'Montserrat', sans-serif;
+    font-size: clamp(0.5rem, 1.8vw, 0.75rem);
+    font-weight: 300;
+    color: #c9a96e;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    opacity: 0.85;
+    margin-top: 4px;
+}
+
+.logo-icon {
+    width: clamp(100px, 30vw, 160px);
+    height: auto;
+    margin: 15px 0;
+    filter: drop-shadow(0 4px 30px rgba(201, 169, 110, 0.4));
+}
+
+.puzzle-head {
+    fill: #c9a96e;
+}
+
+.mind-text {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2.5rem, 10vw, 4.5rem);
+    font-weight: 400;
+    color: #c9a96e;
+    letter-spacing: 8px;
+    line-height: 1;
+}
+
+.balance-text {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(1.6rem, 6vw, 2.8rem);
+    font-weight: 400;
+    font-style: italic;
+    color: #c9a96e;
+    letter-spacing: 2px;
+    line-height: 1.2;
+}
+
+/* ===== BUTTONS ===== */
 .hero-buttons {
     position: relative;
     z-index: 2;
     display: flex;
     flex-direction: row;
-    /* ВСЕГДА В РЯД */
     gap: 16px;
     justify-content: center;
     align-items: center;
@@ -79,9 +144,7 @@ body {
 .btn {
     position: relative;
     flex: 1 1 0;
-    /* Равная ширина, растягиваются */
     min-width: 0;
-    /* Разрешаем сжиматься */
     padding: 18px 16px;
     font-size: 1rem;
     font-weight: 600;
@@ -114,8 +177,30 @@ body {
     transform: translateY(-1px);
 }
 
-/* ===== DESKTOP (1025px+) ===== */
+/* ===== ANIMATIONS ===== */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ============================================ */
+/* ===== DESKTOP (1025px+) — как было ===== */
+/* ============================================ */
 @media (min-width: 1025px) {
+    .hero {
+        justify-content: flex-end;
+    }
+
+    .hero-logo-mobile {
+        display: none !important;
+    }
+
     .hero-buttons {
         gap: 20px;
         padding: 0 40px 80px;
@@ -130,27 +215,26 @@ body {
     }
 }
 
-/* ===== TABLET (768px - 1024px) ===== */
+/* ============================================ */
+/* ===== TABLET + MOBILE (1024px и меньше) ===== */
+/* ============================================ */
 @media (max-width: 1024px) {
-    .hero-buttons {
-        gap: 16px;
-        padding: 0 32px 60px;
-        max-width: 600px;
+    .hero {
+        justify-content: center;
+        padding: 40px 0;
     }
 
-    .btn {
-        padding: 20px 24px;
-        font-size: 1.05rem;
-        border-radius: 15px;
+    .hero-logo-mobile {
+        display: flex;
+        margin-bottom: auto;
+        margin-top: auto;
     }
-}
 
-/* ===== MOBILE (481px - 767px) ===== */
-@media (max-width: 767px) {
     .hero-buttons {
-        gap: 12px;
-        padding: 0 20px 50px;
+        gap: 14px;
+        padding: 0 20px 40px;
         max-width: 100%;
+        margin-top: auto;
     }
 
     .btn {
@@ -160,31 +244,69 @@ body {
     }
 }
 
-/* ===== SMALL MOBILE (480px and below) ===== */
-@media (max-width: 480px) {
+/* ===== MOBILE (767px и меньше) ===== */
+@media (max-width: 767px) {
+    .hero {
+        padding: 30px 0;
+    }
+
+    .festival-title {
+        letter-spacing: 4px;
+    }
+
+    .festival-subtitle {
+        letter-spacing: 2px;
+    }
+
+    .logo-icon {
+        margin: 10px 0;
+    }
+
+    .mind-text {
+        letter-spacing: 5px;
+    }
+
     .hero-buttons {
-        gap: 10px;
-        padding: 0 16px 40px;
+        gap: 12px;
+        padding: 0 16px 30px;
     }
 
     .btn {
-        padding: 14px 10px;
-        font-size: 0.85rem;
+        padding: 14px 12px;
+        font-size: 0.9rem;
+        border-radius: 10px;
+    }
+}
+
+/* ===== SMALL MOBILE (480px и меньше) ===== */
+@media (max-width: 480px) {
+    .hero {
+        padding: 20px 0;
+    }
+
+    .hero-buttons {
+        gap: 10px;
+        padding: 0 14px 25px;
+    }
+
+    .btn {
+        padding: 12px 10px;
+        font-size: 0.82rem;
         border-radius: 10px;
         letter-spacing: 0;
     }
 }
 
-/* ===== EXTRA SMALL (360px and below) ===== */
+/* ===== EXTRA SMALL (360px и меньше) ===== */
 @media (max-width: 360px) {
     .hero-buttons {
         gap: 8px;
-        padding: 0 12px 35px;
+        padding: 0 12px 20px;
     }
 
     .btn {
-        padding: 12px 8px;
-        font-size: 0.8rem;
+        padding: 11px 8px;
+        font-size: 0.75rem;
         border-radius: 8px;
     }
 }
