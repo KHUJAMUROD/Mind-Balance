@@ -64,7 +64,7 @@ body {
     z-index: 1;
 }
 
-/* ===== LOGO MOBILE (скрыт на десктопе) ===== */
+/* ===== LOGO MOBILE ===== */
 .hero-logo-mobile {
     display: none;
     position: relative;
@@ -190,7 +190,7 @@ body {
 }
 
 /* ============================================ */
-/* ===== DESKTOP (1025px+) — как было ===== */
+/* ===== DESKTOP (1025px+) ===== */
 /* ============================================ */
 @media (min-width: 1025px) {
     .hero {
