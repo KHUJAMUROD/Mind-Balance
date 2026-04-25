@@ -183,6 +183,7 @@ body {
         opacity: 0;
         transform: translateY(30px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -268,7 +269,7 @@ body {
     }
 
     .btn {
-        padding: 14px 12px;
+        padding: 25px;
         font-size: 0.9rem;
         border-radius: 10px;
     }
