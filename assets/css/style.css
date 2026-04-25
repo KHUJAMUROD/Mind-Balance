@@ -11,7 +11,7 @@ body {
     background: #1a0510;
 }
 
-/* ===== HERO CONTAINER ===== */
+/* ===== HERO ===== */
 .hero {
     position: relative;
     width: 100%;
@@ -19,14 +19,11 @@ body {
     min-height: 100dvh;
     display: flex;
     align-items: flex-end;
-    /* Кнопки прижаты к низу */
     justify-content: center;
-    padding-bottom: 80px;
-    /* Отступ кнопок от нижнего края */
     overflow: hidden;
 }
 
-/* Background & Overlays */
+/* Background */
 .hero-background {
     position: absolute;
     top: 0;
@@ -41,6 +38,16 @@ body {
     height: 100% !important;
 }
 
+/* Hide watermark */
+.hero-background [class*="watermark"],
+.hero-background [class*="badge"],
+.hero-background a[href*="unicorn.studio"] {
+    display: none !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+}
+
+/* Overlay */
 .hero-overlay {
     position: absolute;
     top: 0;
@@ -51,18 +58,16 @@ body {
     z-index: 1;
 }
 
-/* ===== КНОПКИ (ОСНОВНАЯ СЕТКА) ===== */
+/* ===== BUTTONS ===== */
 .hero-buttons {
     position: relative;
     z-index: 2;
     display: flex;
     gap: 20px;
     justify-content: center;
-    width: 90%;
-    max-width: 1200px;
-    /* Ограничение ширины для ультрашироких мониторов */
-    margin: 0 auto;
-    padding: 260px;
+    width: 100%;
+    max-width: 700px;
+    padding: 0 40px 80px;
 }
 
 .btn {
@@ -95,81 +100,62 @@ body {
     box-shadow: 0 15px 45px rgba(0, 0, 0, 0.6), 0 0 20px rgba(212, 175, 55, 0.2);
 }
 
+.btn:active {
+    transform: translateY(-2px);
+}
 
-
-/* ===== АДАПТИВНОСТЬ ===== */
-
-/* 1. Большие экраны (Laptops/Desktops) */
+/* ===== DESKTOP (1025px+) ===== */
 @media (min-width: 1025px) {
     .btn {
-        max-width: 300px;
-        /* Чтобы кнопки не были слишком растянуты */
+        max-width: 320px;
     }
 }
 
-/* 2. Планшеты (Tablets) */
+/* ===== TABLET (768px - 1024px) ===== */
 @media (max-width: 1024px) {
-    .hero {
-        padding-bottom: 60px;
-    }
-
     .hero-buttons {
-        width: 85%;
-        gap: 15px;
+        gap: 16px;
+        padding: 0 30px 60px;
+        max-width: 600px;
     }
 
     .btn {
-        padding: 18px 20px;
+        padding: 18px 24px;
         font-size: 1rem;
     }
 }
 
-/* 3. Мобильные устройства (Phones) */
-@media (max-width: 768px) {
-    .hero {
-        align-items: center;
-        /* Центрируем кнопки по вертикали для удобства на телефоне */
-        padding-bottom: 0;
-    }
-
+/* ===== MOBILE (481px - 767px) ===== */
+@media (max-width: 767px) {
     .hero-buttons {
-            flex-direction: row;
-            /* ВСТАЮТ В РЯД */
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 90%;
-            height: 30px;
-            max-width: 110%;
-            padding: 0 15px;
-            margin-bottom: -410px;
-            /* Боковые отступы от края экрана */
-            gap: 10px;
-            /* Расстояние между кнопками */
-            z-index: 2; 
+        gap: 12px;
+        padding: 0 20px 50px;
+        max-width: 500px;
     }
 
     .btn {
-        width: 50%;
-        padding: 16px;
+        padding: 16px 20px;
         font-size: 0.95rem;
         border-radius: 12px;
     }
 }
 
-/* 4. Маленькие смартфоны */
+/* ===== SMALL MOBILE (480px and below) ===== */
 @media (max-width: 480px) {
     .hero-buttons {
-        padding: 0 20px;
+        gap: 10px;
+        padding: 0 16px 40px;
+        max-width: 100%;
     }
 
     .btn {
-        font-size: 0.9rem;
-        padding: 14px;
+        padding: 14px 16px;
+        font-size: 0.85rem;
+        border-radius: 10px;
     }
 }
 
-/* Фикс для iOS */
+/* ===== iOS FIX ===== */
 @supports (-webkit-touch-callout: none) {
     .hero {
         min-height: -webkit-fill-available;
