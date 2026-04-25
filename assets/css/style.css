@@ -95,6 +95,8 @@ body {
     box-shadow: 0 15px 45px rgba(0, 0, 0, 0.6), 0 0 20px rgba(212, 175, 55, 0.2);
 }
 
+
+
 /* ===== АДАПТИВНОСТЬ ===== */
 
 /* 1. Большие экраны (Laptops/Desktops) */
@@ -139,8 +141,8 @@ body {
             width: 93%;
             height: 30px;
             max-width: 110%;
-            /* padding: 0 15px; */
-            margin-bottom: -195px;
+            padding: 0 15px;
+            margin-bottom: -830px;
             /* Боковые отступы от края экрана */
             gap: 10px;
             /* Расстояние между кнопками */
