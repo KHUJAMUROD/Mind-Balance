@@ -183,7 +183,6 @@ body {
         opacity: 0;
         transform: translateY(30px);
     }
-
     to {
         opacity: 1;
         transform: translateY(0);
@@ -264,17 +263,14 @@ body {
     }
 
     .hero-buttons {
-        gap: 13px;
-        padding: 100px;
-        height: 100px;
-        width: 50%;
-        margin-bottom: 5%;
+        gap: 12px;
+        padding: 0 16px 30px;
     }
 
     .btn {
-        padding: 50px 50px;
-        font-size: 25px;
-        border-radius: 13px;
+        padding: 14px 12px;
+        font-size: 0.9rem;
+        border-radius: 10px;
     }
 }
 
@@ -286,21 +282,14 @@ body {
 
     .hero-buttons {
         gap: 10px;
-        /* padding: 0 14px 25px; */
-        padding: 100px 100px;
-        height: 100px;
-        /* width: 50%; */
-        margin-bottom: 5%;
+        padding: 0 14px 25px;
     }
 
     .btn {
-        /* padding: 12px 10px; */
-        /* font-size: 0.82rem; */
-        /* border-radius: 10px; */
+        padding: 12px 10px;
+        font-size: 0.82rem;
+        border-radius: 10px;
         letter-spacing: 0;
-        padding: 30px 30px;
-        font-size: 25px;
-        border-radius: 13px;
     }
 }
 
