@@ -264,8 +264,8 @@ body {
     }
 
     .hero-buttons {
-        gap: 15px;
-        padding: 100px 100px;
+        gap: 13px;
+        padding: 100px;
         height: 100px;
         width: 50%;
         margin-bottom: 5%;
