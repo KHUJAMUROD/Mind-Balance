@@ -265,13 +265,13 @@ body {
 
     .hero-buttons {
         gap: 12px;
-        padding: 30px;
+        padding: 100px;
         height: 30px;
         /* width: 50%; */
     }
 
     .btn {
-        padding: 25px;
+        padding: 40px;
         font-size: 0.9rem;
         border-radius: 15px;
     }
