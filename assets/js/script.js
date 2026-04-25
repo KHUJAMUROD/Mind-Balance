@@ -59,6 +59,7 @@ function removeWatermark() {
 window.addEventListener('load', () => {
     setTimeout(removeWatermark, 500);
     setTimeout(removeWatermark, 1500);
+    setTimeout(removeWatermark, 3000);
 });
 
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
