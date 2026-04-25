@@ -976,8 +976,9 @@ body {
         url('/assets/img/final.jpg') no-repeat center center/cover;
     background-attachment: fixed;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     text-align: left;
+    
 }
 
 .cta-final .container {
