@@ -286,14 +286,21 @@ body {
 
     .hero-buttons {
         gap: 10px;
-        padding: 0 14px 25px;
+        /* padding: 0 14px 25px; */
+        padding: 100px 100px;
+        height: 100px;
+        /* width: 50%; */
+        margin-bottom: 5%;
     }
 
     .btn {
-        padding: 12px 10px;
-        font-size: 0.82rem;
-        border-radius: 10px;
+        /* padding: 12px 10px; */
+        /* font-size: 0.82rem; */
+        /* border-radius: 10px; */
         letter-spacing: 0;
+        padding: 30px 30px;
+        font-size: 25px;
+        border-radius: 13px;
     }
 }
 
