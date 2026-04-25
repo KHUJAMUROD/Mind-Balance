@@ -268,11 +268,12 @@ body {
         padding: 100px;
         height: 70px;
         /* width: 50%; */
+        margin-bottom: 3%;
     }
 
     .btn {
-        padding: 40px;
-        font-size: 0.9rem;
+        padding: 50px 50px;
+        font-size: 1rem;
         border-radius: 15px;
     }
 }
